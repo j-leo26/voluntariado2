@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Scripts/css/Login.css" rel="stylesheet" />
+</head>
+<div class="sidenav">
+    <div class="login-main-text">
+        
+        <h2>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</h2>
+        <h2>@Html.ActionLink("Log In", "Login", "Users", new { area = "" }, new { @class = "nav-link" }) </h2>
+        <h2>@Html.ActionLink("Complaints", "Contact", "Home", new { area = "" }, new { @class = "nav-link" }) </h2>
+        <h2>@Html.ActionLink("Create Account", "Index", "Users", new { area = "" }, new { @class = "nav-link" })</h2>
+        
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+            <form action="@Url.Action("Login","Users")" method="post">
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input type="text" name="UserName" class="form-control" placeholder="User Name">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="Password" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-black">Login</button>
+                <button type="submit" class="btn btn-dark"><a href="@Url.Action("Index","Users")">Register</a></button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</html>

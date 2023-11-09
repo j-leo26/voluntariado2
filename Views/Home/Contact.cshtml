@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h1>Complaints</h1>
+<main>
+    <div class="cuerpo">
+
+
+        <br />
+        <br />
+
+        <strong>Name:</strong>
+        <input type="text" id="NombreQuejas">
+
+        <br />
+        <br />
+
+        <strong>Surnames:</strong>
+        <input type="text" id="apellidosQuejas">
+
+        <br />
+        <br />
+
+        <strong>Mail:</strong>
+        <input type="email" id="Correo2">
+
+        <br />
+        <br />
+
+        <form>
+            <strong>Do you have an account with us?</strong>
+            <br />
+            <input type="radio" id="si" value="si" name="tienecuen">
+            <strong>yes</strong>
+            <input type="radio" id="no" value="no" name="tienecuen">
+            <strong>No</strong>
+
+        </form>
+
+        <br />
+
+
+        <strong>Affair:</strong>
+        <br />
+        <textarea type="Asunto" id="Asunto"></textarea>
+
+        <br />
+        <br />
+
+        <button onclick="sendEmail()" class="btn btn-primary btn-md ">Send</button>
+        <script>
+            function sendEmail() {
+                var nombre = document.getElementById("NombreQuejas").value;
+                var apellidos = document.getElementById("apellidosQuejas").value;
+                var correo = document.getElementById("Correo2").value;
+                var tienecuenta = document.querySelector('input[name="tienecuen"]:checked').value;
+                var asunto = document.getElementById("Asunto").value;
+
+                var link = "mailto:joselchavarro26@gmail.com"
+                    + "?subject=" + encodeURIComponent(asunto)
+                    + "&body=" + encodeURIComponent("Nombre: " + nombre + "\r\n"
+                        + "Apellidos: " + apellidos + "\r\n"
+                        + "Correo: " + correo + "\r\n"
+                        + "¿Tiene una cuenta con nosotros?: " + tienecuenta + "\r\n"
+                        + "Asunto: " + asunto);
+
+                window.location.href = link;
+            }
+        </script>
+    </div>
+
+    <address>
+        <strong>Support:</strong>   <a href="mailto:CampoVoluntariado@gmail.com">CampoVoluntariado@gmail.com</a><br />
+        <strong>Marketing:</strong> <a href="mailto:CampoVoluntariado@gmail.com">CampoVoluntariado@gmail.com</a>
+    </address>
+</main>

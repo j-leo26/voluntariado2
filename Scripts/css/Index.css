@@ -1,0 +1,140 @@
+﻿.menu-dezplasable {
+    position: absolute;
+    width: 93%; /*1300px - 97%*/
+    height: 75%; /*451px -75%*/
+    left: 85px;
+    margin-top: var(--bs-gutter-y);
+    overflow: hidden; /* Agregar esta línea */
+}
+
+    .menu-dezplasable ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: slide 16s infinite alternate ease-in-out;
+    }
+
+    .menu-dezplasable li {
+        list-style: none;
+        width: 25%; /* Modificar este valor para ajustar el ancho de cada imagen */
+    }
+
+    .menu-dezplasable img {
+        padding-top: 4px;
+        padding-left: 40px;
+        width: 80%;
+        height: 90%;
+    }
+
+.imagenindex {
+    padding-top: 4px;
+    padding-left: 40px;
+    width: 300px;
+    height: 300px;
+}
+
+.checkbox1 {
+    display: none;
+}
+
+
+/* CSS */
+.button-27 {
+    appearance: none;
+    background-color: #0a151f;
+    border: 2px solid #0a151f;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 40%;
+    will-change: transform;
+}
+
+.button-27:disabled {
+    pointer-events: none;
+}
+
+.button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.opciones1 {
+    background-color: #f9f9f9;
+    width:40%;
+    display:none;
+}
+
+
+    .opciones1 a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 13px;
+
+    }
+
+        .opciones1 a:hover {
+            background-color: #0a151f;
+        }
+
+.desplegar:hover .opciones1{
+    display:block;
+}
+.desplegar {
+    top:80%;
+    left:20%;
+    position: absolute;
+    width: 40%;
+}
+
+.opciones2 {
+    background-color: #f9f9f9;
+    width: 40%;
+    display: none;
+}
+
+
+    .opciones2 a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 13px;
+    }
+
+        .opciones1 a:hover {
+            background-color: #f1f1f1;
+        }
+
+.desplegar2:hover .opciones2 {
+    display: block;
+}
+
+.desplegar2 {
+    top: 80%;
+    left: 60%;
+    position: absolute;
+    width: 40%;
+}
